@@ -10,7 +10,7 @@ phases:
       - chmod +x ./mzcctcsa/gradlew
       - ./mzcctcsa/gradlew build
       
-#artifacts:
-#  files:
-#    - '**/*'
+artifacts:
+  files:
+    - /mzcctcsa/bin/libs/*.jar
 #  base-directory: 'target/my-web-app'
