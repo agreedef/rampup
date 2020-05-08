@@ -1,0 +1,150 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff846cd3936, pid=25268, tid=25280
+#
+# JRE version: Java(TM) SE Runtime Environment 18.9 (11.0.7+8) (build 11.0.7+8-LTS)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM 18.9 (11.0.7+8-LTS, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x6f3936]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:57517 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57516 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -Xverify:none -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=mzcctcsa -javaagent:C:\Users\USER\Desktop\develop\sts461\contents\sts-4.6.1.RELEASE\configuration\org.eclipse.osgi\245\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 com.rampup.proto.MzcctcsaApplication --spring.output.ansi.enabled=always
+
+Host: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+Time: Wed May  6 19:25:48 2020 ¢¥eCN©öI¡¾©ö C¡ÍA¨ª¨öA elapsed time: 1 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000017472fc0800):  WatcherThread [stack: 0x0000006615f00000,0x0000006616000000] [id=25280]
+
+Stack: [0x0000006615f00000,0x0000006616000000],  sp=0x0000006615fff870,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6f3936]
+V  [jvm.dll+0x73fc7d]
+V  [jvm.dll+0x765fe9]
+V  [jvm.dll+0x75e875]
+V  [jvm.dll+0x660b26]
+C  [ucrtbase.dll+0x20e72]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000400000003
+
+
+Register to memory mapping:
+
+RIP=0x00007ff846cd3936 jvm.dll
+RAX=0x0000000400000003 is an unknown value
+RBX=0x0 is NULL
+RCX=0x0000017472fa2420 points into unknown readable memory: e8 4a ee 46 f8 7f 00 00
+RDX=0x0000000000000032 is an unknown value
+RSP=0x0000006615fff870 points into unknown readable memory: 00 08 fc 72 74 01 00 00
+RBP=0x0000000000000002 is an unknown value
+RSI=0x00000174712a9a50 points into unknown readable memory: 03 00 00 00 04 00 00 00
+RDI=0x0000000000000001 is an unknown value
+R8 =0x0 is NULL
+R9 =0x0000017455e70b80 is at begin+0 in a stub
+StubRoutines::atomic_cmpxchg_long [0x0000017455e70b80, 0x0000017455e70b89[ (9 bytes)
+R10=0x00000000546c6148 is an unknown value
+R11=0x0000015dcc3670b3 is an unknown value
+R12=0x0 is NULL
+R13=0x0000017472fc0800 points into unknown readable memory: 18 92 ee 46 f8 7f 00 00
+R14=0x0000000000000032 is an unknown value
+R15=0x0000017472f80a60 points into unknown readable memory: 00 00 00 00 00 00 00 00
+
+
+Registers:
+RAX=0x0000000400000003, RBX=0x0000000000000000, RCX=0x0000017472fa2420, RDX=0x0000000000000032
+RSP=0x0000006615fff870, RBP=0x0000000000000002, RSI=0x00000174712a9a50, RDI=0x0000000000000001
+R8 =0x0000000000000000, R9 =0x0000017455e70b80, R10=0x00000000546c6148, R11=0x0000015dcc3670b3
+R12=0x0000000000000000, R13=0x0000017472fc0800, R14=0x0000000000000032, R15=0x0000017472f80a60
+RIP=0x00007ff846cd3936, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x0000006615fff870)
+0x0000006615fff870:   0000017472fc0800 0000017472fc0800
+0x0000006615fff880:   0000a9bf127a1be4 00007ff846c142d9
+0x0000006615fff890:   00007ff84708abc8 00007ff846d1fc7d
+0x0000006615fff8a0:   000001744da84a60 000001744da84a60
+0x0000006615fff8b0:   000001744da84a60 431bde82d7b634db
+0x0000006615fff8c0:   0000017472f80a60 0000a9bf127a1be4
+0x0000006615fff8d0:   000001744da84a60 00007ff846d45fe9
+0x0000006615fff8e0:   0000000000000001 0000000000000032
+0x0000006615fff8f0:   0000000000000032 0000000000000002
+0x0000006615fff900:   0000000000000000 0000000000000000
+0x0000006615fff910:   0000000000000000 0000000000000000
+0x0000006615fff920:   00007ff8a4ee0e30 0000017472f958c0
+0x0000006615fff930:   0000000000000000 0000006615fffd98
+0x0000006615fff940:   0000017472fc0800 0000000000000000
+0x0000006615fff950:   0000000000100000 0000006615fffca0
+0x0000006615fff960:   0000006615f00000 00007ff846d3e875 
+
+Instructions: (pc=0x00007ff846cd3936)
+0x00007ff846cd3916:   cc cc cc cc cc cc cc cc cc cc 48 89 5c 24 10 56
+0x00007ff846cd3926:   48 83 ec 20 48 8b 35 67 23 3b 00 33 db 48 8b 06
+0x00007ff846cd3936:   39 18 7e 27 48 89 7c 24 30 8b fb 48 8b 40 18 48
+0x00007ff846cd3946:   8b 0c 07 48 8b 01 ff 50 08 48 8b 06 48 8d 7f 08 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x0000017472fc0800 points into unknown readable memory: 18 92 ee 46 f8 7f 00 00
+stack at sp + 1 slots: 0x0000017472fc0800 points into unknown readable memory: 18 92 ee 46 f8 7f 00 00
+stack at sp + 2 slots: 0x0000a9bf127a1be4 is an unknown value
+stack at sp + 3 slots: 0x00007ff846c142d9 jvm.dll
+stack at sp + 4 slots: 0x00007ff84708abc8 jvm.dll
+stack at sp + 5 slots: 0x00007ff846d1fc7d jvm.dll
+stack at sp + 6 slots: 0x000001744da84a60 points into unknown readable memory: 01 00 00 00 00 00 00 00
+stack at sp + 7 slots: 0x000001744da84a60 points into unknown readable memory: 01 00 00 00 00 00 00 00
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000017472f95560, length=15, elements={
+0x000001744da8a000, 0x0000017471c6a800, 0x0000017471c75000, 0x0000017471cdc800,
+0x0000017471cde000, 0x0000017471ce1000, 0x0000017471cf4800, 0x0000017471c40800,
+0x0000017471f68800, 0x0000017471f6d800, 0x0000017471f6f800, 0x0000017472d9e800,
+0x0000017472f42000, 0x0000017472f46000, 0x0000017472fb3000
+}
+
+Java Threads: ( => current thread )
+  0x000001744da8a000 JavaThread "main" [_thread_in_Java, id=16444, stack(0x0000006614500000,0x0000006614600000)]
+  0x0000017471c6a800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7560, stack(0x0000006614c00000,0x0000006614d00000)]
+  0x0000017471c75000 JavaThread "Finalizer" daemon [_thread_blocked, id=25424, stack(0x0000006614d00000,0x0000006614e00000)]
+  0x0000017471cdc800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=21312, stack(0x0000006614e00000,0x0000006614f00000)]
+  0x0000017471cde000 JavaThread "Attach Listener" daemon [_thread_blocked, id=24124, stack(0x0000006614f00000,0x0000006615000000)]
+  0x0000017471ce1000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=6860, stack(0x0000006615000000,0x0000006615100000)]
+  0x0000017471cf4800 JavaThread "Sweeper thread" daemon [_thread_blocked, id=23660, stack(0x0000006615100000,0x0000006615200000)]
+  0x0000017471c40800 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=25356, stack(0x0000006615200000,0x0000006615300000)]
+  0x0000017471f68800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=25768, stack(0x0000006615300000,0x0000006615400000)]
+  0x0000017471f6d800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=10424, stack(0x0000006615400000,0x0000006615500000)]
+  0x0000017471f6f800 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=1364, stack(0x0000006615500000,0x0000006615600000)]
+  0x0000017472d9e800 JavaThread "Service Thread" daemon [_thread_blocked, id=25160, stack(0x0000006615600000,0x0000006615700000)]
+  0x0000017472f42000 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=20168, stack(0x0000006615c00000,0x0000006615d00000)]
+  0x0000017472f46000 JavaThread "RMI TCP Accept-57516" daemon [_thread_in_native, id=2952, stack(0x0000006615d00000,0x0000006615e00000)]
+  0x0000017472fb3000 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=22288, stack(0x0000006615e00000,0x0000006615f00000)]
+
+Other Threads:
+  0x00000174713b6800 VMThread "VM Thread" [stack: 0x0000006614b00000,0x0000006614c00000] [id=25844]
+=>0x0000017472fc0800 WatcherThread [stack: 0x0000006615f00000,0x0000006616000000] [id=25280]
+  0x000001744daa2000 GCTaskThread "GC Thread#0" [stack: 0x0000006614600000,0x0000006614700000] [id=23948]
+  0x0000017472f07000 GCTaskThread "GC Thread#1" [stack: 0x0000006615700000,0x0000006615800000] [id=17600]
+  0x0000017472f0b800 GCTaskThread "GC Thread#2" [stack: 0x0000006615800000,0x0000006615900000] [id=17168]
+  0x0000017472f0c800 GCTaskThread "GC Thread#3" [stack: 0x0000006615900000,0x0000006615a00000] [id=10268]
+  0x0000017472f0d000 GCTaskThread "GC Thread#4" [stack: 0x0000006615a00000,0x0000006615b00000] [id=17144]
+  0x0000017472f10000 GCTaskThread "GC Thread#5" [stack: 0x0000006615b00000,0x0000006615c00000] [id=17196]
+  0x000001744dafe000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006614700000,0x0000006614800000] [id=19040]
+  0x000001744daff800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006614800000,0x0000006614900000] [id=24924]
+  0x00000174712a7800 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000006614900000,0x0000006614a00000] [id=23636]
+  0x00000174712a8800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000006614a00000,0x0000006614b00000] [id=11392]
+
+Threads with active compile tasks:
+C1 CompilerThread01311       1       sun.net.util.URLUtil::urlNoFragString
