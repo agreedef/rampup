@@ -7,10 +7,10 @@ phases:
   build:
     commands:
       - echo Build Starting on `date`
-      - chmod +x ./gradlew
-      - ./gradlew build
+      - chmod +x ./mzcctcsa/gradlew
+      - ./mzcctcsa/gradlew build
       
 artifacts:
   files:
-    - /build/libs/mzcctcsa.jar
+    - /mzcctcsa/build/libs/mzcctcsa.jar
 #  base-directory: 'target/my-web-app'
