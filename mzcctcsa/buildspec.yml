@@ -11,6 +11,7 @@ phases:
       - ./mzcctcsa/gradlew build
       
 artifacts:
+  type: zip
   files:
-    - build/libs/mzcctcsa.jar
+    - build/libs/*.jar
 #  base-directory: 'target/my-web-app'
