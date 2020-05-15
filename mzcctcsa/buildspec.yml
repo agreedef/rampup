@@ -12,5 +12,5 @@ phases:
       
 artifacts:
   files:
-    - /mzcctcsa/build/libs/mzcctcsa.jar
+    - mzcctcsa/build/libs/mzcctcsa.jar
 #  base-directory: 'target/my-web-app'
