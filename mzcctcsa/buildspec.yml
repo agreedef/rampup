@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Build Starting on `date`
+      - chmod +x ./mzcctcsa/gradlew
+      - ./mzcctcsa/gradlew build
+      
+artifacts:
+  type: zip
+  files:
+    - build/libs/*.jar
+#  base-directory: 'target/my-web-app'
